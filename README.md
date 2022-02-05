@@ -7,3 +7,27 @@
 
 This repo contains UI components and wrappers that are used by DITUS web-based
 product UI's. The repo is open source and will remain so.
+
+## Installation
+
+```bash
+npm i @ditus/react-web-common
+```
+
+## Demo
+
+To view the components, after installing type:
+
+```bash
+npm run storybook
+```
+
+## Roadmap
+
+See the [open
+issues](https://github.com/ditus-software/ditus-react-web-common/issues) for a
+list of proposed features (and known issues).
+
+## License
+
+This project is licensed under the terms of the [MIT license](LICENSE.md).

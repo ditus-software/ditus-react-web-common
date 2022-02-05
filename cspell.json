@@ -3,7 +3,8 @@
     "browserslist",
     "DITUS",
     "Formik",
-    "lcov"
+    "lcov",
+    "Roadmap"
   ],
   "ignorePaths": [
     ".vscode"
