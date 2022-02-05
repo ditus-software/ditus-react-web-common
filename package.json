@@ -1,0 +1,75 @@
+{
+  "name": "ditus-react-web-common",
+  "version": "1.0.0",
+  "description": "A set of reusable React web components.",
+  "private": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "changelog": "conventional-changelog -o CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ditus-software/ditus-react-web-common.git"
+  },
+  "author": "DITUS INC. <ditus@rocketmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ditus-software/ditus-react-web-common/issues"
+  },
+  "homepage": "https://github.com/ditus-software/ditus-react-web-common#readme",
+  "peerDependencies": {
+    "formik": "^2.2.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@emotion/react": "^11.4.1",
+    "@mui/material": "^5.4.0",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-replace": "^3.0.1",
+    "babel-loader": "^8.2.3",
+    "rollup": "^2.67.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
+    "@storybook/addon-docs": "^6.4.18",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/react": "^6.4.18",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.7.8",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "coveralls": "^3.1.1",
+    "jest": "26.6.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
