@@ -3,7 +3,7 @@
 // root for details.
 //
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MaterialButton from '@mui/material/Button';
 
@@ -15,7 +15,7 @@ import MaterialButton from '@mui/material/Button';
  * @returns {HTMLElement} An HTML element representing the component.
  */
 function Button(props) {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const {
     children,
@@ -30,7 +30,7 @@ function Button(props) {
 
   const handleClick = () => {
     if (link) {
-      history.push(link);
+      navigate(link);
     }
   };
 
