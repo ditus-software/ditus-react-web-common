@@ -1,0 +1,20 @@
+Test conditions:
+
+- does not display when hidden is true.
+- displays by default.
+- displays when hidden is false.
+- displays as the primary button when primary is true and submit is false.
+- displays as the primary button when primary is false and submit is true.
+- displays as a light button when primary is false and submit is false.
+- displays as the primary button when both primary and submit are true.
+- does not display as disabled by default.
+- displays as disabled when disabled is true.
+- does not display as disabled when disabled is false.
+- displays as a submit button when submit is true.
+- displays as a normal button when submit is false.
+- displays as a normal button by default.
+- displays children within the button.
+- invokes the specified onClick event when clicked.
+- does not invoke onClick event if it is not specified.
+- redirects to the route specified by the link when clicked and onClick is not specified.
+- does not redirect to the route specified by the link if onClick is specified.

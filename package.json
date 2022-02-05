@@ -1,6 +1,6 @@
 {
   "name": "@ditus/react-web-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of reusable React web components.",
   "private": false,
   "main": "dist/index.js",
@@ -26,6 +26,7 @@
     "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
     "@emotion/react": "^11.4.1",
     "@mui/material": "^5.4.0",
     "prop-types": "^15.8.1"
