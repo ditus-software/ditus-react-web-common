@@ -1,0 +1,20 @@
+- CustomLink...
+  - does not display if there are no children.
+  - displays if there are children.
+  - redirects to the relative URL specified by the path attribute.
+  - invokes the event specified by the onClick attribute.
+  - does not redirect to any URL if the onClick attribute is specified.
+  - displays a pointer cursor if the the onClick attribute is specified.
+  - displays a pointer cursor if the path attribute is specified.
+  - adds the specified class specified by the className attribute.
+  - does not display if hidden is specified and is true.
+  - displays if hidden is specified and is false.
+  - displays by default.
+
+Untestable:
+
+- Utilizes React Router so that the entire page does not refresh when a relative URL is clicked.
+
+Unknown:
+
+- redirects to the absolute URL specified by the path attribute.

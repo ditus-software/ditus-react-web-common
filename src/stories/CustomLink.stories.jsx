@@ -3,18 +3,18 @@ import React from 'react';
 import {
   MemoryRouter,
 } from 'react-router-dom';
-import Button from '../components/button/button';
+import CustomLink from '../components/custom-link/custom-link';
 
 export default {
-  title: 'Components/Button',
-  component: Button,
+  title: 'Components/CustomLink',
+  component: CustomLink,
   argTypes: {
   },
 };
 
 const Template = (args) => (
   <MemoryRouter>
-    <Button {...args}>Example</Button>
+    <CustomLink {...args}>Example</CustomLink>
   </MemoryRouter>
 );
 

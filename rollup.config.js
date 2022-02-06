@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
+import postcss from 'rollup-plugin-postcss';
 import pkg from './package.json';
 
 export default {
@@ -11,6 +12,11 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    postcss({
+      extract: false,
+      modules: false,
+      minimize: true,
+    }),
     // nodeResolve({
     //   extensions: ['.js'],
     // }),
