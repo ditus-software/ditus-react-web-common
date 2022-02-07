@@ -1,6 +1,6 @@
 {
   "name": "@ditus/react-web-common",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A set of reusable React web components.",
   "private": false,
   "main": "dist/index.js",
@@ -63,7 +63,8 @@
     "rollup": "^2.67.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-serve": "^1.1.0"
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "files": [
     "dist"
