@@ -1,6 +1,6 @@
 {
   "name": "@ditus/react-web-common",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A set of reusable React web components.",
   "private": false,
   "main": "dist/index.js",
