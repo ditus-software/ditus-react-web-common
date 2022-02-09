@@ -6,3 +6,4 @@ export { default as KeywordSearchBar } from './keyword-search-bar';
 export { default as Markdown } from './markdown';
 export { default as TextField } from './text-field';
 export { default as TransparentButton } from './transparent-button';
+export { default as Vote } from './vote';

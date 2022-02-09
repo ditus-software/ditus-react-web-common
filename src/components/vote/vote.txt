@@ -1,0 +1,5 @@
+Vote...
+  - displays zero when no votes attribute is specified.
+  - displays the value specified by the votes attribute.
+  - invokes the function specified by the onUpVote attribute when the up button is clicked.
+  - invokes the function specified by the onDownVote attribute when the down button is clicked.
