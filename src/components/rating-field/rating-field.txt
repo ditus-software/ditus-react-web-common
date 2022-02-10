@@ -1,0 +1,7 @@
+RatingField...
+  - displays an error in the help text when there is an Formik error.
+  - does not display the help text when there are no Formik errors.
+  - adds the label to the rating field as an ara-label.
+  - does not display the label.
+  - displays the value if the field has a Formik value.
+  - does not display any value if the field does not have a Formik value.
