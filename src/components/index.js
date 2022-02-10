@@ -8,4 +8,5 @@ export { default as MarkdownField } from './markdown-field';
 export { default as RatingField } from './rating-field';
 export { default as TextField } from './text-field';
 export { default as TransparentButton } from './transparent-button';
+export { default as UnboundSelectField } from './unbound-select-field';
 export { default as Vote } from './vote';
