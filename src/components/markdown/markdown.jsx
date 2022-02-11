@@ -50,7 +50,7 @@ function Markdown(props) {
 
   if (markdown) {
     return (
-      <ReactMarkdown className={classnames('markdown', className)} components={components} plugins={[gfm]}>
+      <ReactMarkdown className={classnames('markdown', className)} components={components} remarkPlugins={[gfm]}>
         {markdown}
       </ReactMarkdown>
     );
