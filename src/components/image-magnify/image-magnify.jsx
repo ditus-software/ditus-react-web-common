@@ -4,7 +4,7 @@
 //
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactImageMagnify from 'react-image-magnify';
+import ReactImageMagnify from '@ditus/react-image-magnify';
 import Skeleton from '@mui/material/Skeleton';
 import './image-magnify.css';
 
