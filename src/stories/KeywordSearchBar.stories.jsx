@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {
@@ -12,11 +13,13 @@ export default {
   },
 };
 
-const Template = (args) => (
-  <MemoryRouter>
-    <KeywordSearchBar {...args} />
-  </MemoryRouter>
-);
+function Template(args) {
+  return (
+    <MemoryRouter>
+      <KeywordSearchBar {...args} />
+    </MemoryRouter>
+  );
+}
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Formik, Form } from 'formik';
@@ -10,19 +11,21 @@ export default {
   },
 };
 
-const Template = (args) => (
-  <Formik
-    initialValues={{
-      example: '',
-    }}
-  >
-    {() => (
-      <Form>
-        <TextField name="example" {...args} />
-      </Form>
-    )}
-  </Formik>
-);
+function Template(args) {
+  return (
+    <Formik
+      initialValues={{
+        example: '',
+      }}
+    >
+      {() => (
+        <Form>
+          <TextField name="example" {...args} />
+        </Form>
+      )}
+    </Formik>
+  );
+}
 
 export const Primary = Template.bind({});
 Primary.args = {

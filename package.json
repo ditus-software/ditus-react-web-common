@@ -1,6 +1,6 @@
 {
   "name": "@ditus/react-web-common",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "A set of reusable React web components based on Material UI and Formik.",
   "private": false,
   "main": "dist/index.js",
@@ -9,6 +9,7 @@
     "test": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "changelog": "conventional-changelog -o CHANGELOG.md",
+    "lint": "eslint --ext .jsx,.js src/**",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
