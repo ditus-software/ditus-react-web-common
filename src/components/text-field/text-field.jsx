@@ -10,7 +10,6 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 /**
  * Represents a text field.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */

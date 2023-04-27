@@ -6,12 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as MaterialLink } from '@mui/material';
-import classnames from 'classnames';
-import './custom-link.css';
 
 /**
  * Represents a link that the user can click to navigate to another screen.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
@@ -28,7 +25,8 @@ function CustomLink(props) {
     return (
       <MaterialLink
         onClick={onClick}
-        className={classnames('custom-link', className)}
+        className={className}
+        style={{ cursor: 'pointer' }}
         to={onClick ? '#' : path}
         component={onClick ? null : RouterLink}
         variant="body1"

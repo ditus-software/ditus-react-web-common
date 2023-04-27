@@ -6,13 +6,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormikContext } from 'formik';
 import { Typography, Rating, InputLabel } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
 /**
  * Represents a star-rating field. This component abstracts away the underlying
  * framework being used to display rating fields and provides consistency and
  * should be used.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
@@ -28,14 +26,6 @@ function RatingField(props) {
     name,
   } = props;
 
-  const useStyles = makeStyles((theme) => ({
-    error: {
-      color: theme.palette.error.main,
-    },
-  }));
-
-  const classes = useStyles();
-
   const handleChange = (e) => {
     setFieldValue(name, e.target.value);
   };
@@ -50,7 +40,7 @@ function RatingField(props) {
         value={values[name] ? +values[name] : null}
         onChange={handleChange}
       />
-      <Typography variant="caption" display="block" className={classes.error} hidden={!errors[name]}>
+      <Typography variant="caption" display="block" sx={{ color: 'error.main' }} hidden={!errors[name]}>
         {errors[name]}
       </Typography>
     </div>

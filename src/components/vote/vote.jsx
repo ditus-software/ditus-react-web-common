@@ -7,12 +7,10 @@ import PropTypes from 'prop-types';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { IconButton, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
 /**
  * Represents a component that displays up/down arrows that allow a user to vote
  * on something.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
@@ -25,31 +23,16 @@ function Vote(props) {
     votes,
   } = props;
 
-  const useStyles = makeStyles((theme) => ({
-    button: {
-      padding: 0,
-    },
-    vote: {
-      textAlign: 'center',
-    },
-    arrow: {
-      color: theme.palette.grey[400],
-      fontSize: '3em',
-    },
-  }));
-
-  const classes = useStyles();
-
   return (
-    <div className={classes.vote}>
-      <IconButton className={classes.button} onClick={onUpVote} aria-label={upLabel}>
-        <ArrowDropUpIcon className={classes.arrow} />
+    <div style={{ textAlign: 'center' }}>
+      <IconButton style={{ padding: 0 }} onClick={onUpVote} aria-label={upLabel}>
+        <ArrowDropUpIcon sx={{ color: (theme) => theme.palette.grey[400], fontSize: '3em' }} />
       </IconButton>
       <Typography variant="h5">
         {votes ?? 0}
       </Typography>
-      <IconButton className={classes.button} onClick={onDownVote} aria-label={downLabel}>
-        <ArrowDropDownIcon className={classes.arrow} />
+      <IconButton style={{ padding: 0 }} onClick={onDownVote} aria-label={downLabel}>
+        <ArrowDropDownIcon sx={{ color: (theme) => theme.palette.grey[400], fontSize: '3em' }} />
       </IconButton>
     </div>
   );

@@ -5,19 +5,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormikContext } from 'formik';
-import { TextField, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Box, TextField, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Markdown from '../markdown/markdown';
 
 /**
  * Represents a markdown. This component abstracts away the underlying framework
  * being used to display markdown fields and any associated previews and
  * provides consistency and should be used.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
-function MarkdownField2(props) {
+function MarkdownField(props) {
   const {
     hideBorder,
     hideInput,
@@ -39,29 +38,16 @@ function MarkdownField2(props) {
     values,
   } = useFormikContext();
 
-  const useStyles = makeStyles((theme) => ({
-    previewText: {
-      marginBottom: '0.2em',
-    },
-    previewHeading: {
-      textAlign: 'center',
-    },
-    markdownNoBorder: {
-      marginBottom: '0.2em',
-    },
-    markdownBorder: {
-      borderColor: theme.palette.grey[400],
-      borderWidth: '1px',
-      borderStyle: 'solid',
-      borderRadius: '0.25rem',
-      paddingTop: '.375rem',
-      paddingRight: '.75rem',
-      paddingLeft: '.75rem',
-      marginBottom: '0.2em',
-    },
+  const StyledDiv = styled('div')(({ theme }) => ({
+    marginBottom: '.2em',
+    borderColor: hideBorder ? null : theme.palette.grey[400],
+    borderWidth: hideBorder ? null : '1px',
+    borderStyle: hideBorder ? null : 'solid',
+    borderRadius: hideBorder ? null : '.25rem',
+    paddingTop: hideBorder ? null : '.375rem',
+    paddingRight: hideBorder ? null : '.75rem',
+    paddingLeft: hideBorder ? null : '.75rem',
   }));
-
-  const classes = useStyles();
 
   return (
     <div>
@@ -87,22 +73,23 @@ function MarkdownField2(props) {
         )}
 
       { !hidePreview && values[name] ? (
-        <>
-          {hidePreviewHeading || !previewHeading ? null : <Typography variant="h6" className={classes.previewHeading}>{previewHeading}</Typography>}
-          {previewText ? <Typography variant="body2" className={classes.previewText}>{previewText}</Typography> : null }
-          <Markdown
-            markdown={values[name]}
-            className={hideBorder ?? false ? classes.markdownNoBorder : classes.markdownBorder}
-          />
-        </>
+        <Box sx={{ mt: 2 }}>
+          {hidePreviewHeading || !previewHeading ? null : <Typography variant="body1" sx={{ textAlign: 'center', mb: 1 }}>{previewHeading}</Typography>}
+          {previewText ? <Typography variant="body2" sx={{ mb: 1 }}>{previewText}</Typography> : null }
+          <StyledDiv>
+            <Markdown
+              markdown={values[name]}
+            />
+          </StyledDiv>
+        </Box>
       ) : null }
     </div>
   );
 }
 
-export default MarkdownField2;
+export default MarkdownField;
 
-MarkdownField2.propTypes = {
+MarkdownField.propTypes = {
   /**
    * Hides the border that appears around the preview.
    */
@@ -157,7 +144,7 @@ MarkdownField2.propTypes = {
   previewText: PropTypes.string,
 };
 
-MarkdownField2.defaultProps = {
+MarkdownField.defaultProps = {
   hideBorder: false,
   hideInput: false,
   hidePreview: false,

@@ -17,7 +17,6 @@ import {
  * Represents a select/combo/drop-down field that is not used on a Formik form.
  * This component abstracts away the underlying framework being used to display
  * select fields and provides consistency and should be used.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */

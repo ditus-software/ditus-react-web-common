@@ -5,12 +5,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
 
 /**
  * Represents a button that is transparent. This component should be used
  * instead of using an anchor tag as a button.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
@@ -20,7 +19,7 @@ function TransparentButton(props) {
     onClick,
   } = props;
 
-  const useStyles = makeStyles((theme) => ({
+  const StyleButton = styled(Button)(({ theme }) => ({
     root: {
       borderStyle: 'none',
       '&:focus': {
@@ -39,18 +38,15 @@ function TransparentButton(props) {
     },
   }));
 
-  const classes = useStyles();
-
   return (
-    <Button
+    <StyleButton
       disableElevation
       disableRipple
       disableFocusRipple
-      className={classes.root}
       onClick={onClick}
     >
       {children}
-    </Button>
+    </StyleButton>
   );
 }
 

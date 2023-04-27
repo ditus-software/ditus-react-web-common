@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable no-shadow */
 //
 // Copyright (c) DITUS INC. All rights reserved. See LICENSE file in the project
@@ -9,11 +10,9 @@ import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import classnames from 'classnames';
 
 /**
  * Renders markdown.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
@@ -50,7 +49,7 @@ function Markdown(props) {
 
   if (markdown) {
     return (
-      <ReactMarkdown className={classnames('markdown', className)} components={components} remarkPlugins={[gfm]}>
+      <ReactMarkdown className={className} components={components} remarkPlugins={[gfm]}>
         {markdown}
       </ReactMarkdown>
     );

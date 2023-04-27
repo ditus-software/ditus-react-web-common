@@ -10,7 +10,6 @@ import MaterialButton from '@mui/material/Button';
 /**
  * Represents a button. This component abstracts away the underlying framework
  * being used to display buttons and provides consistency and should be used.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */

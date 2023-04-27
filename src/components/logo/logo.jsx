@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 
 /**
  * Displays the logo.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */

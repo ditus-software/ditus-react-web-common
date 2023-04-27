@@ -19,7 +19,6 @@ import { UriUtil } from '@ditus/uri-util';
 /**
  * Represents a generic search bar that allows users to search. What the users
  * can search for is dependent on the parent component.
- *
  * @param {*} props The properties of the component.
  * @returns {HTMLElement} An HTML element representing the component.
  */
