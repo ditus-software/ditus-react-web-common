@@ -16,10 +16,9 @@ npm i @ditus/react-web-common
 
 ## Demo
 
-To view the components, after installing type:
+To view the components, type:
 
 ```bash
-cd storybook
 npm i
 npm run storybook
 ```
